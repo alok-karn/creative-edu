@@ -1,101 +1,116 @@
+"use client";
+
+import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import Footer from "./components/Footer";
+
+const MotionLink = motion.create(Link);
+
+const curriculumAreas = [
+    "Art",
+    "Drama",
+    "STEM",
+    "Music",
+    "Language",
+    "Physical Education",
+    "Social Studies",
+    "Nature",
+    "Technology",
+    "Emotional Intelligence",
+];
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    return (
+        <div className="space-y-16">
+            <section className="relative h-[70vh] overflow-hidden rounded-xl">
+                <div className="hero-image-reveal absolute inset-0">
+                    <img
+                        src="https://raisingchildren.net.au/__data/assets/image/0019/48070/encouraging-creativity-preschoolers.jpg"
+                        alt="Children engaged in creative activities"
+                        className="object-cover w-full h-full"
+                    />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/50 to-secondary/50 flex items-center justify-center">
+                    <motion.h1
+                        className="text-5xl md:text-7xl font-bold text-white text-center px-4"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5, duration: 0.8 }}>
+                        Fostering Creativity in Early Childhood Education
+                    </motion.h1>
+                </div>
+            </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <section className="text-center staggered-animation">
+                <h2 className="text-3xl font-semibold mb-6">
+                    Empowering Young Minds
+                </h2>
+                <p className="text-xl max-w-2xl mx-auto">
+                    Discover innovative approaches to nurture creativity and
+                    imagination in early childhood education.
+                </p>
+            </section>
+
+            <section>
+                <h2 className="text-3xl font-semibold mb-8 text-center">
+                    Curriculum Areas
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {curriculumAreas.map((area, index) => (
+                        <MotionLink
+                            href={`/curriculum/${area
+                                .toLowerCase()
+                                .replace(" ", "-")}`}
+                            key={area}
+                            className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow"
+                            whileHover={{
+                                scale: 1.05,
+                                backgroundColor: "var(--quinary)",
+                            }}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.3, delay: index * 0.1 }}>
+                            <h3 className="text-xl font-semibold mb-2">
+                                {area}
+                            </h3>
+                            <p>
+                                Explore creative approaches to{" "}
+                                {area.toLowerCase()} in early childhood
+                                education.
+                            </p>
+                        </MotionLink>
+                    ))}
+                </div>
+            </section>
+
+            <section className="text-center">
+                <h2 className="text-3xl font-semibold mb-8">Our Approach</h2>
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}>
+                    <img
+                        src="https://images.stockcake.com/public/0/4/a/04a3ff3c-9b60-4155-a8a4-ea8e4c18271c_large/creative-classroom-activity-stockcake.jpg"
+                        alt="Children engaged in creative activities"
+                        width={800}
+                        height={400}
+                        className="rounded-lg mx-auto mb-8 shadow-xl"
+                    />
+                </motion.div>
+                <motion.p
+                    className="max-w-2xl mx-auto text-lg"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}>
+                    Our comprehensive guide provides educators with the tools,
+                    resources, and insights needed to foster creativity across
+                    various curriculum areas. From art to STEM, we offer
+                    age-appropriate activities and evidence-based strategies to
+                    nurture young minds.
+                </motion.p>
+            </section>
+            <Footer />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    );
 }
