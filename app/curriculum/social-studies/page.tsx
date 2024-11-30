@@ -1,3 +1,4 @@
+import { videoSources } from "@/lib/videoSources";
 import CurriculumArea from "../../components/CurriculumArea";
 
 export default function SocialStudiesPage() {
@@ -55,10 +56,7 @@ export default function SocialStudiesPage() {
                         "Organize a multicultural food tasting event, where children can explore and learn about foods from different cultures, promoting cultural awareness and appreciation.",
                 },
             ]}
-            implementationEvidence={{
-                type: "video",
-                src: "/videos/social-studies-implementation.mp4",
-            }}
+            ageGroupVideos={videoSources.socialStudies}
             criticalReflection="Implementing social studies in early childhood has shown me the importance of fostering a sense of belonging and respect for diversity from a young age. By incorporating diverse perspectives and cultural experiences into our daily activities, I've seen children develop empathy, curiosity about others, and a stronger sense of their own identity. Integrating social studies concepts across the curriculum, such as exploring environmental stewardship in science or diverse artistic traditions in art, has created more holistic and meaningful learning experiences. It's crucial to approach sensitive topics in age-appropriate ways and to involve families in sharing their cultural knowledge and experiences. I've found that using project-based learning approaches, where children explore real-world social issues at their level, has been particularly effective in developing critical thinking and civic engagement skills."
         />
     );

@@ -111,6 +111,20 @@ export default function Home() {
                 </motion.p>
             </section>
             <Footer />
+            {/* add a video */}
+
+            {/* <div className="video-container">
+                <video
+                    controls
+                    width="600"
+                    height="400"
+                    className="rounded-lg"
+                    autoPlay
+                    loop>
+                    <source src="/videos/0_2_video_smaple1.MP4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div> */}
         </div>
     );
 }

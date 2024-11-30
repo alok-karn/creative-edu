@@ -1,3 +1,4 @@
+import { videoSources } from "@/lib/videoSources";
 import CurriculumArea from "../../components/CurriculumArea";
 
 export default function NaturePage() {
@@ -55,10 +56,7 @@ export default function NaturePage() {
                         "Regularly photograph a specific outdoor area throughout the year, discussing and documenting seasonal changes observed by the children.",
                 },
             ]}
-            implementationEvidence={{
-                type: "video",
-                src: "/videos/nature-education-implementation.mp4",
-            }}
+            ageGroupVideos={videoSources.nature}
             criticalReflection="Implementing nature education has profoundly impacted both the children and myself as an educator. Regular outdoor experiences have improved children's physical health, emotional well-being, and cognitive development. I've observed increased creativity, problem-solving skills, and resilience as children navigate and explore natural environments. Integrating nature across the curriculum, such as using natural materials in art or outdoor spaces for storytelling, has enriched all areas of learning. It's crucial to address safety concerns while still allowing for appropriate risk-taking that builds confidence and skills. I've found that involving families in nature education, through take-home activities or family nature events, has extended learning beyond the classroom and fostered a community-wide appreciation for the natural world."
         />
     );

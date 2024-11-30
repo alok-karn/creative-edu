@@ -1,3 +1,4 @@
+import { videoSources } from "@/lib/videoSources";
 import CurriculumArea from "../../components/CurriculumArea";
 
 export default function MusicPage() {
@@ -55,10 +56,7 @@ export default function MusicPage() {
                         "Play various music pieces and have children paint how the music makes them feel, connecting music with emotional expression and visual arts.",
                 },
             ]}
-            implementationEvidence={{
-                type: "video",
-                src: "/videos/music-implementation.mp4",
-            }}
+            ageGroupVideos={videoSources.music}
             criticalReflection="Incorporating music into daily activities has had a profound impact on children's engagement and learning in my classroom. I've observed how music enhances language development, especially for children learning a second language, and supports memory and recall of information. Group music activities have fostered a sense of community and improved social skills. By integrating music with other curriculum areas, such as using counting songs in math or movement songs in physical education, I've created more holistic and enjoyable learning experiences. It's important to provide a variety of musical experiences and to celebrate the diverse musical backgrounds of the children in the classroom."
         />
     );

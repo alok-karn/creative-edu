@@ -1,3 +1,4 @@
+import { videoSources } from "@/lib/videoSources";
 import CurriculumArea from "../../components/CurriculumArea";
 
 export default function EmotionalIntelligencePage() {
@@ -55,10 +56,7 @@ export default function EmotionalIntelligencePage() {
                         "Play a game where children act out different emotions for their peers to guess, enhancing emotional recognition and empathy.",
                 },
             ]}
-            implementationEvidence={{
-                type: "video",
-                src: "/videos/emotional-intelligence-implementation.mp4",
-            }}
+            ageGroupVideos={videoSources.emotionalIntelligence}
             criticalReflection="Implementing a focus on emotional intelligence in early childhood education has had a profound impact on the overall classroom environment and individual child development. By explicitly teaching and modeling emotional awareness and regulation strategies, I've observed significant improvements in children's ability to express their feelings appropriately, resolve conflicts, and show empathy towards others. Integrating emotional intelligence across the curriculum, such as discussing characters' feelings in literature or exploring emotions through art, has deepened learning experiences. It's crucial to create a safe, supportive environment where all emotions are acknowledged and children feel comfortable expressing themselves. Collaborating with families to reinforce emotional intelligence skills at home has been key to supporting children's overall social-emotional development. Moving forward, I aim to further explore how to support children in developing resilience and coping with more complex emotions and situations."
         />
     );

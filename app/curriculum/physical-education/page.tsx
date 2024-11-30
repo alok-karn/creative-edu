@@ -1,3 +1,4 @@
+import { videoSources } from "@/lib/videoSources";
 import CurriculumArea from "../../components/CurriculumArea";
 
 export default function PhysicalEducationPage() {
@@ -55,10 +56,7 @@ export default function PhysicalEducationPage() {
                         "Combine storytelling with yoga poses, creating an imaginative movement experience that enhances flexibility, balance, and mindfulness.",
                 },
             ]}
-            implementationEvidence={{
-                type: "video",
-                src: "/videos/physical-education-implementation.mp4",
-            }}
+            ageGroupVideos={videoSources.physicalEducation}
             criticalReflection="Implementing a comprehensive physical education program in early childhood has shown me the profound impact movement has on children's overall development. By providing a variety of structured and unstructured physical activities, I've observed improvements in children's coordination, confidence, and social skills. Integrating physical activities throughout the day, such as movement breaks during cognitive tasks or using active games to teach academic concepts, has enhanced engagement and learning across all areas of the curriculum. It's crucial to create an inclusive environment that celebrates diverse abilities and encourages all children to participate and enjoy physical activity. I've found that involving families and educating them about the importance of physical activity has helped reinforce healthy habits beyond the classroom."
         />
     );

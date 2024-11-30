@@ -1,3 +1,4 @@
+import { videoSources } from "@/lib/videoSources";
 import CurriculumArea from "../../components/CurriculumArea";
 
 export default function STEMPage() {
@@ -55,10 +56,7 @@ export default function STEMPage() {
                         "Provide a variety of recycled materials and challenge children to build a structure that can hold a specific weight, encouraging problem-solving and engineering skills.",
                 },
             ]}
-            implementationEvidence={{
-                type: "video",
-                src: "/videos/stem-implementation.mp4",
-            }}
+            ageGroupVideos={videoSources.stem}
             criticalReflection="Implementing STEM activities in early childhood education has shown me the incredible capacity young children have for scientific thinking and problem-solving. By providing open-ended materials and encouraging experimentation, I've seen children develop persistence, creativity, and critical thinking skills. Integrating STEM concepts across the curriculum, such as using mathematical thinking in art projects or scientific observation in outdoor play, has created more holistic and engaging learning experiences. It's crucial to maintain a balance between guided instruction and free exploration to foster children's natural curiosity and love for learning."
         />
     );

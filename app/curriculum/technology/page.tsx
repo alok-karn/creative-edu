@@ -1,3 +1,4 @@
+import { videoSources } from "@/lib/videoSources";
 import CurriculumArea from "../../components/CurriculumArea";
 
 export default function TechnologyPage() {
@@ -55,10 +56,7 @@ export default function TechnologyPage() {
                         "Create a life-sized grid on the floor and have children write 'code' (directional instructions) to guide a friend through an obstacle course, introducing basic programming concepts.",
                 },
             ]}
-            implementationEvidence={{
-                type: "video",
-                src: "/videos/technology-implementation.mp4",
-            }}
+            ageGroupVideos={videoSources.technology}
             criticalReflection="Integrating technology into early childhood education has shown me both its potential benefits and the importance of thoughtful implementation. When used intentionally, technology has enhanced children's engagement, provided new avenues for creativity, and supported individualized learning. However, it's crucial to maintain a balance with hands-on, real-world experiences and to actively guide children's technology use. I've found that using technology to document learning (e.g., digital portfolios) has improved communication with families and children's self-reflection. Integrating technology across the curriculum, such as using digital tools for art creation or data collection in science projects, has expanded learning opportunities. It's essential to continually evaluate and select high-quality digital resources and to model responsible digital citizenship. Moving forward, I aim to further explore how technology can support inclusive practices and provide new ways for children to express their ideas and understanding."
         />
     );

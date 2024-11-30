@@ -1,3 +1,4 @@
+import { videoSources } from "@/lib/videoSources";
 import CurriculumArea from "../../components/CurriculumArea";
 
 export default function LanguagePage() {
@@ -55,10 +56,7 @@ export default function LanguagePage() {
                         "Go on a nature walk and challenge children to find items that start with different letters, combining outdoor exploration with letter recognition and phonics.",
                 },
             ]}
-            implementationEvidence={{
-                type: "video",
-                src: "/videos/language-implementation.mp4",
-            }}
+            ageGroupVideos={videoSources.language}
             criticalReflection="Implementing a rich language curriculum has shown me the incredible capacity young children have for language acquisition and creativity. By providing a print-rich environment and engaging children in meaningful conversations throughout the day, I've seen significant improvements in vocabulary, comprehension, and communication skills. Integrating language activities across all areas of the curriculum, such as discussing scientific observations or describing mathematical patterns, has created more holistic learning experiences. It's crucial to celebrate linguistic diversity and support children's home languages while fostering English language development. I've found that using technology thoughtfully, such as interactive storytelling apps, can enhance engagement and provide additional language support when used in moderation alongside traditional methods."
         />
     );

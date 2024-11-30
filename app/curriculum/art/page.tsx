@@ -1,3 +1,4 @@
+import { videoSources } from "@/lib/videoSources";
 import CurriculumArea from "../../components/CurriculumArea";
 
 export default function ArtPage() {
@@ -29,11 +30,6 @@ export default function ArtPage() {
                     "Color theory experiments",
                     "Nature-inspired art projects",
                 ],
-                "6-8": [
-                    "Introduction to famous artists and art styles",
-                    "Mixed media projects",
-                    "Collaborative murals",
-                ],
             }}
             creativeActivities={[
                 {
@@ -55,10 +51,11 @@ export default function ArtPage() {
                         "Guide children in creating color wheels that represent different emotions, fostering emotional intelligence and color theory understanding.",
                 },
             ]}
-            implementationEvidence={{
-                type: "video",
-                src: "/videos/art-implementation.mp4",
-            }}
+            ageGroupVideos={videoSources.art}
+            // implementationEvidence={{
+            //     type: "video",
+            //     src: "/videos/art-implementation.mp4",
+            // }}
             criticalReflection="Reflecting on my teaching practices, I've found that providing open-ended art experiences has significantly enhanced creativity in my classroom. By focusing on the process rather than the end product, children feel more confident in expressing themselves. I've also noticed that integrating art with other curriculum areas, such as using painting to explore science concepts, has led to deeper, more engaging learning experiences."
         />
     );

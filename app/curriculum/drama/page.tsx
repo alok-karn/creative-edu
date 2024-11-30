@@ -1,3 +1,4 @@
+import { videoSources } from "@/lib/videoSources";
 import CurriculumArea from "../../components/CurriculumArea";
 
 export default function DramaPage() {
@@ -55,10 +56,7 @@ export default function DramaPage() {
                         "Have children create masks representing different emotions, then act out scenarios using their masks to express feelings.",
                 },
             ]}
-            implementationEvidence={{
-                type: "video",
-                src: "/videos/drama-implementation.mp4",
-            }}
+            ageGroupVideos={videoSources.drama}
             criticalReflection="Reflecting on my teaching practices, I've observed that incorporating drama activities has significantly enhanced children's confidence, empathy, and problem-solving skills. By providing opportunities for dramatic play and performance, children learn to express themselves more effectively and understand others' perspectives. I've found that integrating drama with other curriculum areas, such as using role-play to explore historical events or scientific concepts, has led to more engaging and memorable learning experiences."
         />
     );
