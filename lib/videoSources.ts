@@ -3,7 +3,7 @@
 export const videoSources = {
     art: {
         "0-2": "/videos/0_2_video_smaple1.MP4",
-        "2-3": "/videos/2-3_video_sample2.MP4",
+        "2-3": "https://www.youtube.com/embed/K4DyBUG242c?si=UNupzm8sBLmv5j2J",
         "3-5": "/videos/3-5_video_sample3.MP4",
     },
     drama: {

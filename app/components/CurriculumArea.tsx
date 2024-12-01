@@ -210,7 +210,7 @@ const CurriculumArea: React.FC<CurriculumAreaProps> = ({
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}>
-                        <video
+                        {/* <video
                             controls
                             className="w-full max-w-2xl mx-auto rounded-lg shadow-lg mb-6">
                             <source
@@ -224,7 +224,16 @@ const CurriculumArea: React.FC<CurriculumAreaProps> = ({
                                 label="English"
                             />
                             Your browser does not support the video tag.
-                        </video>
+                        </video> */}
+
+                        <iframe
+                            src={ageGroupVideos[activeCreativeTab]}
+                            width="560"
+                            height="315"
+                            frameborder="0"
+                            allow="autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen; accelerometer"
+                            allowFullScreen
+                            className="w-full max-w-2xl mx-auto rounded-lg shadow-lg mb-6"></iframe>
                         {creativeActivities
                             .filter(
                                 (activity) =>
